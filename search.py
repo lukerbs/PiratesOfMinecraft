@@ -6,7 +6,7 @@ def random_address():
 	return address
 
 print('Searching for open servers...')
-for i in range(100000):
+while True:
 	# get a random ip address
 	address = random_address()
 	print(address)
@@ -17,7 +17,7 @@ for i in range(100000):
 		print(address)
 		print('')
 		file = open('servers.txt', 'a')
-		file.write(address)
+		file.write(address + '\n')
 		file.close()
 	except Exception as e:
 		print(e)
