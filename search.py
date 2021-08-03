@@ -8,20 +8,15 @@ def random_address():
 	return address
 
 def query_address(address):
-	# get a random ip address
-	address = random_address()
-	print(address)
 	try:
 		server = MinecraftServer.lookup(address)
 		status = server.status()
-		print(status)
-		print(address)
-		print('')
 		file = open('servers.txt', 'a')
 		file.write(address + '\n')
 		file.close()
+		print(address + ' ✅')
 	except Exception as e:
-		print(e)
+		print(address + ' ❌')
 		pass
 	print('')
 	return
@@ -29,7 +24,7 @@ def query_address(address):
 print('Searching for open servers...')
 while True:
 	ip_addresses = []
-	for i in range(1000):
+	for i in range(250):
 		ip_addresses.append(random_address())
 
 	with concurrent.futures.ThreadPoolExecutor() as executor:
