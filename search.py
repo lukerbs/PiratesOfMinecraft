@@ -7,11 +7,6 @@ def random_address():
 	address = ".".join(map(str, (random.randint(0, 255) for _ in range(4)))) + ':25565'
 	return address
 
-ip_addresses = []
-for i in range(250):
-	ip_addresses.append(random_address())
-
-print('Searching for open servers...')
 def query_address(address):
 	# get a random ip address
 	address = random_address()
@@ -31,12 +26,11 @@ def query_address(address):
 	print('')
 	return
 
-start_time = time.time()
-with concurrent.futures.ThreadPoolExecutor() as executor:
-	executor.map(query_address, ip_addresses)
-end_time = time.time()
+print('Searching for open servers...')
+while True:
+	ip_addresses = []
+	for i in range(1000):
+		ip_addresses.append(random_address())
 
-avg_time = (end_time - start_time) / len(ip_addresses)
-
-print('AVG TIME')
-print(avg_time)
+	with concurrent.futures.ThreadPoolExecutor() as executor:
+		executor.map(query_address, ip_addresses)
