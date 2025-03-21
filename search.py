@@ -17,16 +17,18 @@ RESET = "\033[0m"
 BOLD = "\033[1m"
 
 
-def random_address():
-    # More efficient IP generation
-    return f"{random.randint(0, 255)}.{random.randint(0, 255)}.{random.randint(0, 255)}.{random.randint(0, 255)}:25565"
+def get_random_address():
+    """Generate a random IP address"""
+    ip = f"{random.randint(0, 255)}.{random.randint(0, 255)}.{random.randint(0, 255)}.{random.randint(0, 255)}"
+    # 95% chance to use default port
+    port = 25565
+    return f"{ip}:{port}"
 
 
-def query_address(address):
+def query_server(address):
+    """Query a Java edition server"""
     try:
-        # Use a shorter timeout for initial connection
         server = JavaServer.lookup(address, timeout=1)
-
         try:
             # Try status protocol first (faster)
             status = server.status(retries=0)
@@ -70,31 +72,36 @@ def query_address(address):
         return True
 
     except Exception:
-        # Minimize output for failed servers to reduce overhead
         return False
 
 
-print(f"{BOLD}Searching for open Minecraft servers...{RESET}")
+def scan_batch(batch_size=1000):
+    """Scan a batch of addresses"""
+    addresses = [get_random_address() for _ in range(batch_size)]
+
+    with concurrent.futures.ThreadPoolExecutor(max_workers=200) as executor:
+        futures = [executor.submit(query_server, address) for address in addresses]
+        concurrent.futures.wait(futures, return_when=concurrent.futures.ALL_COMPLETED)
+
+    return sum(1 for f in futures if f.result())
+
+
+print(f"{BOLD}Searching for Minecraft Java servers...{RESET}")
+print("Scanning random IP addresses...")
+
 try:
+    total_servers_found = 0
     batch_counter = 0
+
     while True:
-        # Generate addresses more efficiently
-        ip_addresses = [random_address() for _ in range(1000)]  # Increased batch size
-
-        # Use more workers to increase throughput
-        with concurrent.futures.ThreadPoolExecutor(max_workers=200) as executor:
-            # Submit all tasks
-            futures = []
-            for address in ip_addresses:
-                futures.append(executor.submit(query_address, address))
-
-            # Wait for all futures to complete - no timeout handling needed here
-            concurrent.futures.wait(futures, return_when=concurrent.futures.ALL_COMPLETED)
-
-        # Track progress
+        # Scan a batch and count found servers
+        servers_found = scan_batch()
+        total_servers_found += servers_found
         batch_counter += 1
+
+        # Show progress every 3 batches
         if batch_counter % 3 == 0:
-            print(f"Processed {batch_counter * 1000} addresses...")
+            print(f"Processed {batch_counter * 1000} addresses... Found {total_servers_found} servers so far")
 
 except KeyboardInterrupt:
-    print(f"\n{BOLD}Search stopped.{RESET}")
+    print(f"\n{BOLD}Search stopped. Found {total_servers_found} servers in total.{RESET}")
