@@ -118,7 +118,6 @@ def query_server(address):
             players_online = status.players.online
             latency = round(status.latency, 1)
         except Exception as e:
-            print(f"Error querying status for {address}: {e}")
             try:
                 # Fall back to query protocol if status fails
                 query = server.query()
@@ -136,7 +135,6 @@ def query_server(address):
                 # Store this temporarily for console output only
                 players_online = query.players.online
             except Exception as e:
-                print(f"Error querying query for {address}: {e}")
                 return False
 
         # Write to JSON file when a server is found
