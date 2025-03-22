@@ -1,6 +1,6 @@
-from mcstatus import MinecraftServer
+from mcstatus import JavaServer
 
-file = open('servers.txt', 'r')
+file = open("servers.txt", "r")
 count = 0
 
 ips = []
@@ -13,11 +13,11 @@ while True:
 
 for ip in ips:
     try:
-        server = MinecraftServer.lookup(ip)
+        server = JavaServer.lookup(ip)
         status = server.status()
         print(ip)
         print("Players online:", status.players.online)
         print("Version:", status.version.name)
-        print('')
+        print("")
     except:
         pass

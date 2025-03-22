@@ -1,0 +1,173 @@
+{
+  "servers": [
+    {
+      "address": "163.44.102.29:25565",
+      "type": "status",
+      "players_max": 20,
+      "version": "1.20.1",
+      "description": "A Minecraft Server\u00a7r",
+      "timestamp": "2025-03-21 13:57:13"
+    },
+    {
+      "address": "135.148.77.14:25565",
+      "type": "status",
+      "players_max": 15,
+      "version": "1.12.2",
+      "description": "A Minecraft Server\u00a7r",
+      "timestamp": "2025-03-21 13:58:09"
+    },
+    {
+      "address": "124.238.243.42:25565",
+      "type": "status",
+      "players_max": 69,
+      "version": "Velocity 1.7.2-1.21.4",
+      "description": "\u00a7r\u00a79Another \u00a7r\u00a7c\u00a7lMOTD\u00a7r\n\u00a7r\u00a7o\u00a7n\u00a7r\u00a7o\u00a7n\u00a7r\u00a7o\u00a7n\u00a7cm\u00a7r\u00a7o\u00a7n\u00a7cu\u00a7r\u00a7o\u00a7n\u00a7cc\u00a7r\u00a7o\u00a7n\u00a7eh\u00a7r\u00a7o\u00a7n\u00a7e \u00a7r\u00a7o\u00a7n\u00a7aw\u00a7r\u00a7o\u00a7n\u00a7ao\u00a7r\u00a7o\u00a7n\u00a7aw\u00a7r",
+      "timestamp": "2025-03-21 13:58:40"
+    },
+    {
+      "address": "188.6.78.212:25565",
+      "type": "status",
+      "players_max": 20,
+      "version": "1.21.1",
+      "description": "RE-Imagined Craft - Priv\u00e1t Szerver",
+      "timestamp": "2025-03-21 13:59:38"
+    },
+    {
+      "address": "170.81.87.108:25565",
+      "type": "status",
+      "players_max": 20,
+      "version": "1.20.1",
+      "description": "\u00a74AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA\u00a7r",
+      "timestamp": "2025-03-21 14:03:51"
+    },
+    {
+      "address": "46.27.151.142:25565",
+      "type": "status",
+      "players_max": 20,
+      "version": "1.21.1",
+      "description": "rawr :3",
+      "timestamp": "2025-03-21 14:10:41"
+    },
+    {
+      "address": "174.75.30.154:25565",
+      "type": "status",
+      "players_max": 20,
+      "version": "Paper 1.21.3",
+      "description": "\"Un\"-Official AFG Server - Vanilla(ish)",
+      "timestamp": "2025-03-21 14:11:55"
+    },
+    {
+      "address": "116.202.127.168:25565",
+      "type": "status",
+      "players_max": 20,
+      "version": "1.21.4",
+      "description": "A Minecraft Server",
+      "timestamp": "2025-03-21 14:23:42"
+    },
+    {
+      "address": "62.113.101.58:25565",
+      "type": "status",
+      "players_max": 20,
+      "version": "Paper 1.21.4",
+      "description": "horrorbot",
+      "timestamp": "2025-03-21 14:25:09"
+    },
+    {
+      "address": "37.10.123.116:25565",
+      "type": "status",
+      "players_max": 10,
+      "version": "1.19.2",
+      "description": "A Minecraft Server\u00a7r",
+      "timestamp": "2025-03-21 14:26:13"
+    },
+    {
+      "address": "74.217.202.122:25565",
+      "type": "status",
+      "players_max": 20,
+      "version": "1.7.10",
+      "description": "A Minecraft Server",
+      "timestamp": "2025-03-21 14:42:28"
+    },
+    {
+      "address": "172.232.10.112:25565",
+      "type": "status",
+      "players_max": 5,
+      "version": "1.21.4",
+      "description": "Platos Cave!",
+      "timestamp": "2025-03-21 14:50:57"
+    },
+    {
+      "address": "158.101.98.95:25565",
+      "type": "status",
+      "players_max": 20,
+      "version": "1.18.2",
+      "description": "A Minecraft Server\u00a7r",
+      "timestamp": "2025-03-21 14:55:08"
+    },
+    {
+      "address": "152.53.128.153:25565",
+      "type": "status",
+      "players_max": 20,
+      "version": "Paper 1.19.4",
+      "description": "\u00a74\u00a7l The Server for the cool guys\u00a7r",
+      "timestamp": "2025-03-21 14:57:00"
+    },
+    {
+      "address": "2.44.67.69:25565",
+      "type": "status",
+      "players_max": 10,
+      "version": "Paper 1.21.4",
+      "description": "covos",
+      "timestamp": "2025-03-21 14:58:06"
+    },
+    {
+      "address": "5.45.96.252:25565",
+      "type": "status",
+      "players_max": 20,
+      "version": "1.19.3",
+      "description": "A Minecraft Server\u00a7r",
+      "timestamp": "2025-03-21 15:02:51"
+    },
+    {
+      "address": "203.241.228.47:25565",
+      "type": "status",
+      "players_max": 7777,
+      "version": "Paper 1.21.3",
+      "description": "\u00a7r\u00a77>> \u00a7r\u00a74\uc624\ucc9c\uc5b8\u00a7r\u00a7c\uc11c\ubc84 \u00a7r\u00a7b\uc2dc\uc98c \u00a7r\u00a7f4 \u00a7r\u00a77<<\u00a7r",
+      "timestamp": "2025-03-21 15:06:02"
+    },
+    {
+      "address": "213.108.44.172:25565",
+      "type": "status",
+      "players_max": 1000,
+      "version": "1.20.1",
+      "description": "\u00a7f\u00a7lAllTheMods9ToTheSky: Ukraine Server without license\u00a7r",
+      "timestamp": "2025-03-21 15:09:15"
+    },
+    {
+      "address": "86.246.51.134:25565",
+      "type": "status",
+      "players_max": 20,
+      "version": "Paper 1.21.4",
+      "description": "Al Labrov is the new TargHamas",
+      "timestamp": "2025-03-21 15:18:57"
+    },
+    {
+      "address": "142.120.168.158:25565",
+      "type": "status",
+      "players_max": 20,
+      "version": "1.20.1",
+      "description": "A Cool Minecraft Server\u00a7r",
+      "timestamp": "2025-03-21 15:22:43"
+    },
+    {
+      "address": "93.200.192.63:25565",
+      "type": "status",
+      "players_max": 20,
+      "version": "1.20.1",
+      "description": "A Minecraft Server\u00a7r",
+      "timestamp": "2025-03-21 15:43:13"
+    }
+  ],
+  "total_count": 21
+}
