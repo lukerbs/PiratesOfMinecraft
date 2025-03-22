@@ -23,6 +23,10 @@ import uuid
 import requests
 import datetime
 from mcstatus import JavaServer
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
 
 # Initialize Rich console for pretty output
 console = Console()
@@ -30,7 +34,7 @@ console = Console()
 # Constants
 SERVERS_FILE = "discovered_servers.json"
 MINECRAFT_DIR = minecraft_launcher_lib.utils.get_minecraft_directory()
-CLIENT_ID = "46061691-069a-400f-9cef-a636d076ccdb"  # You'll need to register an Azure application
+CLIENT_ID = os.getenv("CLIENT_ID")  # You'll need to register an Azure application
 REDIRECT_URL = "http://localhost:8000/callback"
 # These are the correct endpoints for Minecraft authentication
 AUTH_URL = "https://login.live.com/oauth20_authorize.srf"
